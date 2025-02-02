@@ -2,20 +2,18 @@
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "blocks": [
     {
+      "type": "prompt",
       "alignment": "left",
       "segments": [
         {
-          "background": "#6272a4",
-          "foreground": "#f8f8f2",
-          "leading_diamond": "\ue0b6",
           "style": "diamond",
+          "leading_diamond": "\ue0b6",
           "template": "\uf2c0 {{ .UserName }}@{{ .HostName }} ",
+          "foreground": "#f8f8f2",
+          "background": "#6272a4",
           "type": "session"
         },
         {
-          "background": "#bd93f9",
-          "foreground": "#f8f8f2",
-          "powerline_symbol": "\ue0b0",
           "properties": {
             "folder_icon": "\uf115",
             "folder_separator_icon": "/",
@@ -23,12 +21,12 @@
           },
           "style": "powerline",
           "template": " \uf114 {{ .Path }} ",
+          "foreground": "#f8f8f2",
+          "powerline_symbol": "\ue0b0",
+          "background": "#bd93f9",
           "type": "path"
         },
         {
-          "background": "#ffb86c",
-          "foreground": "#f8f8f2",
-          "powerline_symbol": "\ue0b0",
           "properties": {
             "branch_icon": "",
             "fetch_stash_count": true,
@@ -37,70 +35,73 @@
           },
           "style": "powerline",
           "template": " \ue725 ({{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }}) ",
+          "foreground": "#f8f8f2",
+          "powerline_symbol": "\ue0b0",
+          "background": "#ffb86c",
           "type": "git"
         },
         {
-          "background": "#8be9fd",
-          "foreground": "#f8f8f2",
-          "powerline_symbol": "\ue0b0",
           "style": "powerline",
           "template": " \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
+          "foreground": "#f8f8f2",
+          "powerline_symbol": "\ue0b0",
+          "background": "#8be9fd",
           "type": "node"
         },
         {
-          "background": "#ff79c6",
-          "foreground": "#f8f8f2",
           "properties": {
             "time_format": "3:04PM"
           },
           "style": "diamond",
           "template": " \uf017 {{ .CurrentDate | date .Format }} ",
+          "foreground": "#f8f8f2",
+          "background": "#ff79c6",
           "type": "time"
         },
         {
-          "background": "#50FA7B",
-          "foreground": "#f8f8f2",
-          "powerline_symbol": "\ue0b0",
           "properties": {
             "always_enabled": true
           },
           "style": "powerline",
           "template": " \ueba2 {{ .FormattedMs }} ",
+          "foreground": "#f8f8f2",
+          "powerline_symbol": "\ue0b0",
+          "background": "#50FA7B",
           "type": "executiontime"
         }
-      ],
-      "type": "prompt"
+      ]
     },
     {
+      "type": "rprompt",
       "alignment": "left",
       "segments": [
         {
-          "background": "#f1fa8c",
-          "foreground": "#282a36",
-          "invert_powerline": true,
-          "leading_diamond": "\ue0b2",
           "style": "diamond",
-          "template": " \ue7ad {{.Profile}}{{if .Region}}@{{.Region}}{{end}}",
+          "leading_diamond": "\ue0b2",
           "trailing_diamond": "\ue0b4",
-          "type": "aws"
+          "template": " \ue7ad {{.Profile}}{{if .Region}}@{{.Region}}{{end}}",
+          "foreground": "#282a36",
+          "background": "#f1fa8c",
+          "type": "aws",
+          "invert_powerline": true
         }
-      ],
-      "type": "rprompt"
+      ]
     },
     {
+      "type": "prompt",
       "alignment": "left",
-      "newline": true,
       "segments": [
         {
-          "foreground": "#8BE9FD",
           "style": "plain",
           "template": "\uf0a9 ",
+          "foreground": "#8BE9FD",
+          "background": "",
           "type": "text"
         }
       ],
-      "type": "prompt"
+      "newline": true
     }
   ],
-  "final_space": true,
-  "version": 2
+  "version": 3,
+  "final_space": true
 }
